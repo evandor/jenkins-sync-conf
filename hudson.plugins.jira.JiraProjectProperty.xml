@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hudson.plugins.jira.JiraProjectProperty_-DescriptorImpl plugin="jira@2.2.1">
+<hudson.plugins.jira.JiraProjectProperty_-DescriptorImpl plugin="jira@2.3">
   <sites>
     <hudson.plugins.jira.JiraSite>
       <url>http://jira.twentyeleven.de/</url>

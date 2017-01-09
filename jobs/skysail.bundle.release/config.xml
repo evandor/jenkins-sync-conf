@@ -23,6 +23,7 @@
               <string>skysail.api.search</string>
               <string>skysail.client.testsupport</string>
               <string>skysail.domain</string>
+              <string>skysail.product.template</string>
               <string>skysail.server</string>
               <string>skysail.server.app.template</string>
               <string>skysail.server.app.webconsole</string>
@@ -63,7 +64,6 @@
       <projectUrl>https://github.com/evandor/skysail/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <org.jenkinsci.plugins.flow__plugin.FlowProjectProperty plugin="flow@1.3"/>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.0.1">
     <configVersion>2</configVersion>

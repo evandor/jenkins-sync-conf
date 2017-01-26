@@ -5,18 +5,20 @@
 &lt;a href=&apos;/job/skysail-apps.build/ws/skysail.api/generated/docs/javadoc/index.html&apos;&gt;Skysail API Javadoc&lt;/a&gt;&lt;br&gt;&#xd;
 &lt;a href=&apos;/job/skysail-apps.build/ws/skysail.server/generated/docs/javadoc/index.html&apos;&gt;Skysail Server Javadoc&lt;/a&gt;&lt;br&gt;&#xd;
 </description>
-  <logRotator class="hudson.tasks.LogRotator">
-    <daysToKeep>-1</daysToKeep>
-    <numToKeep>50</numToKeep>
-    <artifactDaysToKeep>-1</artifactDaysToKeep>
-    <artifactNumToKeep>-1</artifactNumToKeep>
-  </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.23.1">
-      <projectUrl>https://github.com/evandor/skysail-apps/</projectUrl>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>50</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.25.0">
+      <projectUrl>https://github.com/evandor/skysail-appss/</projectUrl>
+      <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <org.jenkinsci.plugins.flow__plugin.FlowProjectProperty plugin="flow@1.3"/>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.0.1">
     <configVersion>2</configVersion>
@@ -44,7 +46,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>java SDK 8u5</jdk>
   <triggers>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.23.1">
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.25.0">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
   </triggers>
@@ -72,13 +74,19 @@
       <parsingRulesPath>/home/carsten/hudson/parsing_rules</parsingRulesPath>
       <useProjectRule>false</useProjectRule>
     </hudson.plugins.logparser.LogParserPublisher>
-    <hudson.plugins.jira.JiraIssueUpdater plugin="jira@2.2.1"/>
+    <hudson.plugins.jira.JiraIssueUpdater plugin="jira@2.3">
+      <issueSelector class="hudson.plugins.jira.selector.DefaultIssueSelector"/>
+      <labels/>
+    </hudson.plugins.jira.JiraIssueUpdater>
     <hudson.tasks.Mailer plugin="mailer@1.18">
       <recipients>evandor@gmail.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <com.cloudbees.jenkins.GitHubCommitNotifier plugin="github@1.23.1">
+    <com.cloudbees.jenkins.GitHubCommitNotifier plugin="github@1.25.0">
+      <statusMessage>
+        <content></content>
+      </statusMessage>
       <resultOnFailure>FAILURE</resultOnFailure>
     </com.cloudbees.jenkins.GitHubCommitNotifier>
   </publishers>

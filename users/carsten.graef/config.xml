@@ -19,7 +19,7 @@
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.18">
       <emailAddress>carsten.graef@kvb.de</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.2">
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
       <data class="concurrent-hash-map">
         <entry>
           <string>ssa.metrics.int</string>
@@ -30,7 +30,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.8">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.10">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@2.52">

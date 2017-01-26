@@ -15,7 +15,7 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
       <data class="concurrent-hash-map">
         <entry>
-          <string>ssa.website.int</string>
+          <string>skysail.doc</string>
           <boolean>true</boolean>
         </entry>
         <entry>
@@ -23,7 +23,7 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>skysail.doc</string>
+          <string>ssa.website.int</string>
           <boolean>true</boolean>
         </entry>
         <entry>

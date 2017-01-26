@@ -17,7 +17,7 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>kRbiHVzdao+HQ4rt8L7k56BkJBjq/bAZq8TEJ/nxs+bgUr37ZChVQ7m/N3MsSMEl</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.2">
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
       <data class="concurrent-hash-map">
         <entry>
           <string>ssa.metrics.int</string>
@@ -34,7 +34,7 @@
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.18">
       <emailAddress>evandor@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.8">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.10">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>

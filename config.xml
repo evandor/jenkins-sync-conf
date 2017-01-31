@@ -162,6 +162,7 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>bnd.master</string>
+        <string>dummy</string>
         <string>gup_website</string>
         <string>maven-fluido-skin-tweaked</string>
         <string>mitgliederportal-linkchecker</string>

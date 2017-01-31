@@ -6,7 +6,7 @@
     <string>OldData</string>
     <string>hudson.diagnosis.ReverseProxySetupMonitor</string>
   </disabledAdministrativeMonitors>
-  <version>2.19.4</version>
+  <version>2.32.1</version>
   <numExecutors>4</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -186,7 +186,6 @@
         <string>skysail-webconsole.sonar</string>
         <string>skysail.api.sonar</string>
         <string>skysail.bundle.release</string>
-        <string>skysail.client.sonar</string>
         <string>skysail.client.timetables.ajs2.int</string>
         <string>skysail.cucumber</string>
         <string>skysail.cucumber (branch)</string>

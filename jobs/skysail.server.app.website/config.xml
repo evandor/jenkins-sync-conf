@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>builds and exports website project</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -12,30 +12,33 @@
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>application</name>
+          <description></description>
+          <defaultValue>website</defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
     <org.jenkinsci.plugins.flow__plugin.FlowProjectProperty plugin="flow@1.3"/>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.0.1">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git://github.com/evandor/skysail-webconsole.git</url>
+        <url>git://github.com/evandor/skysail.git</url>
         <credentialsId>52dc175f-8512-45d2-97e6-ebec0e60b907</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>**</name>
+        <name>master</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
-    <extensions>
-      <hudson.plugins.git.extensions.impl.PathRestriction>
-        <includedRegions></includedRegions>
-        <excludedRegions>cnf/.*
-webconsole.antlr.*</excludedRegions>
-      </hudson.plugins.git.extensions.impl.PathRestriction>
-    </extensions>
+    <extensions/>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -52,25 +55,27 @@ webconsole.antlr.*</excludedRegions>
     <hudson.plugins.gradle.Gradle plugin="gradle@1.25">
       <description></description>
       <switches></switches>
-      <tasks>build</tasks>
+      <tasks>skysail.server.app.${application}:clean
+skysail.server.app.${application}:build
+skysail.server.app.${application}:export.website.prod</tasks>
       <rootBuildScriptDir></rootBuildScriptDir>
       <buildFile></buildFile>
-      <gradleName>gradle 2.9</gradleName>
-      <useWrapper>false</useWrapper>
+      <gradleName>(Default)</gradleName>
+      <useWrapper>true</useWrapper>
       <makeExecutable>false</makeExecutable>
       <fromRootBuildScriptDir>false</fromRootBuildScriptDir>
       <useWorkspaceAsHome>false</useWorkspaceAsHome>
       <passAsProperties>false</passAsProperties>
     </hudson.plugins.gradle.Gradle>
-    <org.jenkinsci.plugins.tattletale.TattletaleBuilder plugin="tattletale-plugin@0.3">
-      <inputDirectory>.</inputDirectory>
-      <outputDirectory>tattletale-report</outputDirectory>
-    </org.jenkinsci.plugins.tattletale.TattletaleBuilder>
+    <hudson.tasks.Shell>
+      <command>cp skysail.server.app.${application}/generated/distributions/executable/${application}.prod.jar /home/carsten/skysail/products/website/prod
+cp -r skysail.server.app.${application}/config/* /home/carsten/skysail/products/website/prod/config</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.plugins.cloneworkspace.CloneWorkspacePublisher plugin="clone-workspace-scm@0.6">
       <workspaceGlob></workspaceGlob>
-      <criteria>Any</criteria>
+      <criteria>Successful</criteria>
       <archiveMethod>TAR</archiveMethod>
       <overrideDefaultExcludes>false</overrideDefaultExcludes>
     </hudson.plugins.cloneworkspace.CloneWorkspacePublisher>
@@ -86,12 +91,6 @@ webconsole.antlr.*</excludedRegions>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
-    <com.cloudbees.jenkins.GitHubCommitNotifier plugin="github@1.25.0">
-      <statusMessage>
-        <content></content>
-      </statusMessage>
-      <resultOnFailure>FAILURE</resultOnFailure>
-    </com.cloudbees.jenkins.GitHubCommitNotifier>
   </publishers>
   <buildWrappers/>
 </project>

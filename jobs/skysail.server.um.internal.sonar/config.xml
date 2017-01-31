@@ -31,7 +31,8 @@
     <submoduleCfg class="list"/>
     <extensions>
       <hudson.plugins.git.extensions.impl.PathRestriction>
-        <includedRegions>skysail.server.um.internal/.*</includedRegions>
+        <includedRegions>skysail.server.um.internal/.*
+test</includedRegions>
         <excludedRegions></excludedRegions>
       </hudson.plugins.git.extensions.impl.PathRestriction>
     </extensions>
@@ -42,7 +43,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>java SDK 8u25</jdk>
   <triggers>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.23.1">
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.25.0">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
   </triggers>
@@ -54,7 +55,7 @@
       <tasks>:${moduleDir}:clean :${moduleDir}:test</tasks>
       <rootBuildScriptDir></rootBuildScriptDir>
       <buildFile></buildFile>
-      <gradleName>gradle 2.2-rc-1</gradleName>
+      <gradleName>(Default)</gradleName>
       <useWrapper>false</useWrapper>
       <makeExecutable>false</makeExecutable>
       <fromRootBuildScriptDir>true</fromRootBuildScriptDir>
@@ -65,6 +66,7 @@
       <project>${moduleDir}/sonar-project.properties</project>
       <properties></properties>
       <javaOpts></javaOpts>
+      <additionalArguments></additionalArguments>
       <jdk>(Inherit From Job)</jdk>
       <task></task>
     </hudson.plugins.sonar.SonarRunnerBuilder>

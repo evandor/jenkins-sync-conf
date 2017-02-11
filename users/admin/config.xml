@@ -15,11 +15,11 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
       <data class="concurrent-hash-map">
         <entry>
-          <string>skysail.doc</string>
+          <string>notes</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>notes</string>
+          <string>skysail.doc</string>
           <boolean>true</boolean>
         </entry>
         <entry>
@@ -127,10 +127,6 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>skysail.cucumber (branch)</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>ssp.pline.export.prod</string>
           <boolean>true</boolean>
         </entry>
@@ -168,7 +164,7 @@
     <org.jenkins.ci.plugins.keyboard__shortcuts.KeyboardShortcutsUserProperty plugin="keyboard-shortcuts-plugin@1.2">
       <disabled>false</disabled>
     </org.jenkins.ci.plugins.keyboard__shortcuts.KeyboardShortcutsUserProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.10">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.11">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -187,8 +183,11 @@
       </roles>
       <timestamp>1401686086771</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
-    <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@2.52">
+    <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@2.54">
       <triggers/>
     </hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@1.0">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
   </properties>
 </user>

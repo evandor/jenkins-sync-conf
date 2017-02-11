@@ -17,10 +17,9 @@
             <completeBuild>true</completeBuild>
           </threshold>
         </jenkins.triggers.ReverseBuildTrigger>
-        <hudson.triggers.SCMTrigger>
-          <spec>* * * * *</spec>
-          <ignorePostCommitHooks>false</ignorePostCommitHooks>
-        </hudson.triggers.SCMTrigger>
+        <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.25.1">
+          <spec></spec>
+        </com.cloudbees.jenkins.GitHubPushTrigger>
       </triggers>
     </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
   </properties>

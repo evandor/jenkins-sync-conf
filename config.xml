@@ -513,6 +513,7 @@
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>ssp.pact.export.int</string>
+        <string>ssp.pact.export.standalone</string>
         <string>wyt</string>
       </jobNames>
       <jobFilters/>

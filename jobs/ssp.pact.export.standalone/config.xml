@@ -72,8 +72,8 @@
     <hudson.tasks.Shell>
       <command>export BUILD_ID=dontKillMe
 cd /home/carsten/.hudson/jobs/ssp.pact.export.standalone/workspace/skysail.product.pact/deployment/scripts
-chmod 755 deploy_int.sh
-./deploy_int.sh</command>
+chmod 755 deploy_standalone.sh
+./deploy_standalone.sh</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

@@ -19,7 +19,6 @@
     <org.jenkinsci.plugins.authorizeproject.AuthorizeProjectProperty plugin="authorize-project@1.2.2">
       <strategy class="org.jenkinsci.plugins.authorizeproject.strategy.TriggeringUsersAuthorizationStrategy"/>
     </org.jenkinsci.plugins.authorizeproject.AuthorizeProjectProperty>
-    <org.jenkinsci.plugins.flow__plugin.FlowProjectProperty plugin="flow@1.3"/>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.0.1">
     <configVersion>2</configVersion>
@@ -43,24 +42,13 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>java SDK 8u25</jdk>
-  <triggers>
-    <jenkins.triggers.ReverseBuildTrigger>
-      <spec></spec>
-      <upstreamProjects>skysail.cucumber</upstreamProjects>
-      <threshold>
-        <name>UNSTABLE</name>
-        <ordinal>1</ordinal>
-        <color>YELLOW</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </jenkins.triggers.ReverseBuildTrigger>
-  </triggers>
+  <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.plugins.gradle.Gradle plugin="gradle@1.25">
       <description></description>
       <switches></switches>
-      <tasks>skysail.product.pact:phantomJsTest</tasks>
+      <tasks>skysail.product.pact:phantomJsTest -DbaseUrl=http://192.168.100.3:8391/ -Dadmin.password=23dela11_skysail</tasks>
       <rootBuildScriptDir></rootBuildScriptDir>
       <buildFile></buildFile>
       <gradleName>gradle 2.9</gradleName>

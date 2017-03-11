@@ -60,7 +60,7 @@
     <hudson.plugins.gradle.Gradle plugin="gradle@1.25">
       <description></description>
       <switches></switches>
-      <tasks>skysail.product.pact:export.pact.int</tasks>
+      <tasks>skysail.product.pact:phantomJsTest</tasks>
       <rootBuildScriptDir></rootBuildScriptDir>
       <buildFile></buildFile>
       <gradleName>gradle 2.9</gradleName>
@@ -70,12 +70,6 @@
       <useWorkspaceAsHome>false</useWorkspaceAsHome>
       <passAsProperties>false</passAsProperties>
     </hudson.plugins.gradle.Gradle>
-    <hudson.tasks.Shell>
-      <command>export BUILD_ID=dontKillMe
-cd /home/carsten/.hudson/jobs/ssp.pact.export.int/workspace/skysail.product.pact/deployment/scripts
-chmod 755 deploy_int.sh
-./deploy_int.sh</command>
-    </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.Mailer plugin="mailer@1.18">

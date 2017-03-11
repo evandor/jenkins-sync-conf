@@ -8,7 +8,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/evandor/jenkins-sync-con</url>
+        <url>https://github.com/evandor/jenkins-sync-conf</url>
         <credentialsId>019383d9-507e-4980-8864-5fe433e8439a</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>

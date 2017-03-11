@@ -512,6 +512,7 @@
       <properties class="hudson.model.View$PropertyList"/>
       <jobNames>
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>ssp.pact.e2e</string>
         <string>ssp.pact.export.int</string>
         <string>ssp.pact.export.standalone</string>
         <string>wyt</string>

@@ -13,7 +13,6 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.18"/>
     <jenkins.security.ApiTokenProperty>
       <apiToken>amIspwTs90Nq5dZYi8tX2+3w5b4UYot40MJyJ0A9KZ3gUr37ZChVQ7m/N3MsSMEl</apiToken>
     </jenkins.security.ApiTokenProperty>
@@ -43,5 +42,8 @@
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@1.0">
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.18">
+      <emailAddress>carsten@carsten.evandor.de</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
   </properties>
 </user>

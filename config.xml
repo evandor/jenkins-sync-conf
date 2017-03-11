@@ -262,6 +262,7 @@
         <string>ssp.todos.service.restart.int</string>
         <string>sspnotes.build.master</string>
         <string>ssptimetables.build.master</string>
+        <string>testsync</string>
         <string>unitprofiler2</string>
         <string>www.graefundpartner.de</string>
         <string>www.twentyeleven.de</string>

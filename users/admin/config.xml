@@ -15,11 +15,11 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.0.4">
       <data class="concurrent-hash-map">
         <entry>
-          <string>notes</string>
+          <string>skysail.doc</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>skysail.doc</string>
+          <string>notes</string>
           <boolean>true</boolean>
         </entry>
         <entry>
@@ -124,6 +124,10 @@
         </entry>
         <entry>
           <string>skysail.cucumber</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>ssp.pact.e2e</string>
           <boolean>true</boolean>
         </entry>
         <entry>

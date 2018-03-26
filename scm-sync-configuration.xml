@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson.plugins.scm__sync__configuration.ScmSyncConfigurationPlugin version="1">
   <scm class="hudson.plugins.scm_sync_configuration.scms.ScmSyncGitSCM"/>
-  <scmRepositoryUrl>scm:git:https://github.com/evandor/jenkins-sync-conf</scmRepositoryUrl>
-  <noUserCommitMessage>false</noUserCommitMessage>
+  <scmRepositoryUrl>scm:git:https://12709f78bc9dac1bc4cd46b7ad721f5eb58af619@github.com/evandor/jenkins-sync-conf</scmRepositoryUrl>
+  <noUserCommitMessage>true</noUserCommitMessage>
   <displayStatus>true</displayStatus>
   <commitMessagePattern>[message]</commitMessagePattern>
   <manualSynchronizationIncludes/>
